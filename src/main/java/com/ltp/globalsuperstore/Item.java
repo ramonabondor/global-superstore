@@ -3,15 +3,15 @@ package com.ltp.globalsuperstore;
 import java.util.Date;
 import java.util.UUID;
 
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Past;
-
 import org.springframework.format.annotation.DateTimeFormat;
+
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Past;
 
 public class Item {
 
-    @NotBlank(message = "Please select a category")
+    @NotBlank (message = "Please select a category")
     private String category;
     @NotBlank(message = "Name cannot be blank")
     private String name;
@@ -19,7 +19,7 @@ public class Item {
     private Double price;
     @Min(value = 0, message = "Discount cannot be negative")
     private Double discount;
-    @Past(message = "Date must be of the past")
+    @Past (message = "Date must be of the past")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
     private String id;

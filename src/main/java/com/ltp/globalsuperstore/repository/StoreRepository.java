@@ -1,8 +1,9 @@
+package com.ltp.globalsuperstore.repository;
+
 import java.util.List;
 import java.util.ArrayList;
 
 import com.ltp.globalsuperstore.Item;
-import com.ltp.globalsuperstore.repository;
 
 public class StoreRepository {
 
@@ -12,8 +13,8 @@ public class StoreRepository {
         return items.get(index);
     }
 
-    public void addItem(int index) {
-        items.add(index);
+    public void addItem(Item item) {
+        items.add(item);
     }
 
     public void updateItem(Item item, int index) {
